@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="booking.aspx.cs" Inherits="BOOKING_APPLICATION.booking" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="contact-us.aspx.cs" Inherits="BOOKING_APPLICATION.contact_us" %>
 
 <!DOCTYPE html>
 
@@ -6,16 +6,21 @@
 <head runat="server">
     <title></title>
 </head>
-    <style>
+
+<style>
         body {
             background-color:burlywood;
             background-attachment: fixed;
             background-size:100%;
         }
         .auto-style3 {
-            width: 218px;
-        }
-    </style>
+        width: 232px;
+    }
+    .auto-style4 {
+        width: 233px;
+    }
+</style>
+
 <body>
     <form id="form1" runat="server">
         <table style="width:100%;">
@@ -36,11 +41,11 @@
                 <td>
                     <asp:LinkButton ID="LinkButton4" runat="server">CONTACT US</asp:LinkButton>
                 </td>
-            </tr>
-            </table>
-            <table>
+             </tr>
+         </table>
+        <table>
                 <tr>
-                    <td class="auto-style3">
+                    <td class="auto-style4">
                         <asp:Label ID="Label1" runat="server" Text="Name:"></asp:Label></td>
                     <td>
                         <asp:TextBox ID="TextBox1" runat="server" Width="592px"></asp:TextBox></td>
@@ -48,7 +53,7 @@
             </table>
             <table>
                 <tr>
-                    <td class="auto-style3">
+                    <td class="auto-style4">
                         <asp:Label ID="Label2" runat="server" Text="Email:"></asp:Label></td>
                     <td>
                         <asp:TextBox ID="TextBox2" runat="server" Width="592px" TextMode="Email"></asp:TextBox></td>
@@ -56,7 +61,7 @@
             </table>
             <table>
                 <tr>
-                    <td class="auto-style3">
+                    <td class="auto-style4">
                         <asp:Label ID="Label3" runat="server" Text="Phone No.:"></asp:Label></td>
                     <td>
                         <asp:TextBox ID="TextBox3" runat="server" Width="592px" MaxLength="10" TextMode="Number"></asp:TextBox></td>
@@ -64,40 +69,23 @@
             </table>
             <table>
                 <tr>
-                    <td class="auto-style3">
-                        <asp:Label ID="Label4" runat="server" Text="No. of booking:"></asp:Label></td>
+                    <td class="auto-style4">
+                        <asp:Label ID="Label4" runat="server" Text="Subject:"></asp:Label></td>
                     <td>
-                        <asp:DropDownList ID="DropDownList1" runat="server" Width="167px">
-                            <asp:ListItem>0</asp:ListItem>
-                            <asp:ListItem>1</asp:ListItem>
-                            <asp:ListItem>2</asp:ListItem>
-                            <asp:ListItem>3</asp:ListItem>
-                            <asp:ListItem>4</asp:ListItem>
-                            <asp:ListItem>5</asp:ListItem>
-                            <asp:ListItem>6</asp:ListItem>
-                            <asp:ListItem>7</asp:ListItem>
-                            <asp:ListItem>8</asp:ListItem>
-                            <asp:ListItem>9</asp:ListItem>
-                            <asp:ListItem>10</asp:ListItem>
-                            <asp:ListItem>11</asp:ListItem>
-                            <asp:ListItem>12</asp:ListItem>
-                            <asp:ListItem></asp:ListItem>
-                        </asp:DropDownList>
-                    </td>
+                        <asp:TextBox ID="TextBox4" runat="server" Width="592px" MaxLength="10" TextMode="Number"></asp:TextBox></td>
                 </tr>
             </table>
             <table>
                 <tr>
                     <td class="auto-style3">
-                        <asp:Label ID="Label5" runat="server" Text="Address"></asp:Label></td>
+                        <asp:Label ID="Label5" runat="server" Text="Description"></asp:Label></td>
                     <td>
-                        <asp:TextBox ID="TextBox5" runat="server" Width="594px" TextMode="MultiLine"></asp:TextBox></td>
+                        <asp:TextBox ID="TextBox5" runat="server" Width="595px" TextMode="MultiLine"></asp:TextBox></td>
                 </tr>
             </table>
             <div>
                 <asp:Button ID="Button1" runat="server" Text="Submit" Width="104px" />
-        </div>
-        
+            </div>
     </form>
 </body>
 </html>
