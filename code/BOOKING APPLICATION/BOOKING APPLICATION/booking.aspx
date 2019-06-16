@@ -43,7 +43,7 @@
                     <td class="auto-style3">
                         <asp:Label ID="Label1" runat="server" Text="Name:"></asp:Label></td>
                     <td>
-                        <asp:TextBox ID="TextBox1" runat="server" Width="592px"></asp:TextBox></td>
+                        <asp:TextBox ID="TextBox1" runat="server" Width="592px" ToolTip="Enter your name"></asp:TextBox></td>
                 </tr>
             </table>
             <table>
@@ -51,7 +51,7 @@
                     <td class="auto-style3">
                         <asp:Label ID="Label2" runat="server" Text="Email:"></asp:Label></td>
                     <td>
-                        <asp:TextBox ID="TextBox2" runat="server" Width="592px" TextMode="Email"></asp:TextBox></td>
+                        <asp:TextBox ID="TextBox2" runat="server" Width="592px" TextMode="Email" ToolTip="Enter your email"></asp:TextBox></td>
                 </tr>
             </table>
             <table>
@@ -59,13 +59,13 @@
                     <td class="auto-style3">
                         <asp:Label ID="Label3" runat="server" Text="Phone No.:"></asp:Label></td>
                     <td>
-                        <asp:TextBox ID="TextBox3" runat="server" Width="592px" MaxLength="10" TextMode="Number"></asp:TextBox></td>
+                        <asp:TextBox ID="TextBox3" runat="server" Width="592px" MaxLength="10" TextMode="Number" ToolTip="Enter your phone number"></asp:TextBox></td>
                 </tr>
             </table>
             <table>
                 <tr>
                     <td class="auto-style3">
-                        <asp:Label ID="Label4" runat="server" Text="No. of booking:"></asp:Label></td>
+                        <asp:Label ID="Label4" runat="server" Text="No. of person:"></asp:Label></td>
                     <td>
                         <asp:DropDownList ID="DropDownList1" runat="server" Width="167px">
                             <asp:ListItem>0</asp:ListItem>
@@ -91,12 +91,24 @@
                     <td class="auto-style3">
                         <asp:Label ID="Label5" runat="server" Text="Address"></asp:Label></td>
                     <td>
-                        <asp:TextBox ID="TextBox5" runat="server" Width="594px" TextMode="MultiLine"></asp:TextBox></td>
+                        <asp:TextBox ID="TextBox5" runat="server" Width="594px" TextMode="MultiLine" ToolTip="Type your address"></asp:TextBox></td>
                 </tr>
             </table>
             <div>
-                <asp:Button ID="Button1" runat="server" Text="Submit" Width="104px" />
+                <asp:Button ID="Button1" runat="server" Text="Submit" Width="104px" OnClick="Button1_Click" />
         </div>
+        
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=&quot;C:\Users\swapn\Google Drive\ASSIGNMENT\ASSIGNMENT\code\BOOKING APPLICATION\BOOKING APPLICATION\DB.mdb&quot;" InsertCommand="INSERT INTO [User] (PhoneNo, Name, Address, No_of_person, Date_of_booking, Stadium, MatchNo) VALUES (?, ?, ?, ?, ?, ?, ?)" ProviderName="System.Data.OleDb">
+            <InsertParameters>
+                <asp:ControlParameter ControlID="TextBox3" Name="?" PropertyName="Text" />
+                <asp:ControlParameter ControlID="TextBox1" Name="?" PropertyName="Text" />
+                <asp:ControlParameter ControlID="TextBox5" Name="?" PropertyName="Text" />
+                <asp:ControlParameter ControlID="DropDownList1" Name="?" PropertyName="SelectedValue" />
+                <asp:Parameter Name="?" />
+                <asp:Parameter Name="?" />
+                <asp:Parameter Name="?" />
+            </InsertParameters>
+        </asp:SqlDataSource>
         
     </form>
 </body>

@@ -85,6 +85,9 @@
         <div>
             <center><asp:Label ID="Label4" runat="server" Text="Copyright 2019"></asp:Label></center>
         </div>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=&quot;C:\Users\swapn\Google Drive\ASSIGNMENT\ASSIGNMENT\code\BOOKING APPLICATION\BOOKING APPLICATION\DB.mdb&quot;" ProviderName="System.Data.OleDb" SelectCommand="SELECT NewsID, News_Heading, Writing, Photo FROM News"></asp:SqlDataSource>
+        <asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource1">
+        </asp:GridView>
     </form>
 </body>
 </html>

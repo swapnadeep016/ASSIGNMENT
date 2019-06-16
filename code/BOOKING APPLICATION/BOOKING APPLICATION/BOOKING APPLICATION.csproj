@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="booking.aspx" />
     <Content Include="contact-us.aspx" />
+    <Content Include="DB.mdb" />
     <Content Include="match.aspx" />
     <Content Include="pic\button.png" />
     <Content Include="pic\logo.png" />
