@@ -68,6 +68,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="booking.aspx" />
+    <Content Include="contact-us.aspx" />
+    <Content Include="match.aspx" />
     <Content Include="pic\button.png" />
     <Content Include="pic\logo.png" />
     <Content Include="index.aspx" />
@@ -81,12 +83,26 @@
     <Compile Include="booking.aspx.designer.cs">
       <DependentUpon>booking.aspx</DependentUpon>
     </Compile>
+    <Compile Include="contact-us.aspx.cs">
+      <DependentUpon>contact-us.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contact-us.aspx.designer.cs">
+      <DependentUpon>contact-us.aspx</DependentUpon>
+    </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="match.aspx.cs">
+      <DependentUpon>match.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="match.aspx.designer.cs">
+      <DependentUpon>match.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
