@@ -18,5 +18,10 @@ namespace BOOKING_APPLICATION
         {
             SqlDataSource1.Insert();
         }
+
+        protected void DropDownList2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
