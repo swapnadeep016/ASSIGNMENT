@@ -16,6 +16,15 @@ namespace BOOKING_APPLICATION
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+
+            SqlDataSource1.InsertParameters["Date_of_booking"].DefaultValue = DateTime.Now.ToString();
+
+            SqlDataSource1.InsertParameters["Stadium"].DefaultValue = GridView1.Rows[0].Cells[3].Text;
+
+            SqlDataSource1.InsertParameters["MatchNo"].DefaultValue = GridView1.Rows[0].Cells[0].Text;
+
+            SqlDataSource1.InsertParameters["Date_of_match"].DefaultValue = GridView1.Rows[0].Cells[2].Text;
+
             SqlDataSource1.Insert();
         }
 

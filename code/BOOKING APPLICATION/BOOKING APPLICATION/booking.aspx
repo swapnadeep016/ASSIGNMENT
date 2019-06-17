@@ -123,7 +123,7 @@
                 <asp:Button ID="Button1" runat="server" Text="Submit" Width="104px" OnClick="Button1_Click" />
         </div>
         
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=&quot;C:\Users\swapn\Google Drive\ASSIGNMENT\ASSIGNMENT\code\BOOKING APPLICATION\BOOKING APPLICATION\DB.mdb&quot;" InsertCommand="INSERT INTO [User] (PhoneNo, Name, Address, No_of_person, Date_of_booking, Stadium, MatchNo) VALUES (?, ?, ?, ?, ?, ?, ?)" ProviderName="System.Data.OleDb">
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=&quot;C:\Users\swapn\Google Drive\ASSIGNMENT\ASSIGNMENT\code\BOOKING APPLICATION\BOOKING APPLICATION\DB.mdb&quot;" InsertCommand="INSERT INTO [User] (PhoneNo, Name, Address, No_of_person, Date_of_booking, Stadium, MatchNo, Matchname, Date_of_match) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)" ProviderName="System.Data.OleDb">
             <InsertParameters>
                 <asp:ControlParameter ControlID="TextBox3" Name="?" PropertyName="Text" />
                 <asp:ControlParameter ControlID="TextBox1" Name="?" PropertyName="Text" />
@@ -132,13 +132,15 @@
                 <asp:Parameter Name="?" />
                 <asp:Parameter Name="?" />
                 <asp:Parameter Name="?" />
+                <asp:ControlParameter ControlID="DropDownList2" Name="?" PropertyName="SelectedValue" />
+                <asp:Parameter Name="?" />
             </InsertParameters>
         </asp:SqlDataSource>
         
         <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=&quot;C:\Users\swapn\Google Drive\ASSIGNMENT\ASSIGNMENT\code\BOOKING APPLICATION\BOOKING APPLICATION\DB.mdb&quot;" OnSelecting="SqlDataSource2_Selecting" ProviderName="System.Data.OleDb" SelectCommand="SELECT Matchname FROM [Match]"></asp:SqlDataSource>
         
         <div>
-            <asp:GridView ID="GridView1" runat="server"></asp:GridView>
+            <asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource3"></asp:GridView>
         </div>
         <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=&quot;C:\Users\swapn\Google Drive\ASSIGNMENT\ASSIGNMENT\code\BOOKING APPLICATION\BOOKING APPLICATION\DB.mdb&quot;" OnSelecting="SqlDataSource3_Selecting" ProviderName="System.Data.OleDb" SelectCommand="SELECT MatchNo, Availability, Date_of_match, Stadium FROM [Match] WHERE (Matchname = ?)">
             <SelectParameters>
