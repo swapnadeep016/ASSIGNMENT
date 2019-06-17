@@ -91,7 +91,7 @@
                     <td class="auto-style3">
                         <asp:Label ID="Label6" runat="server" Text="Matches:"></asp:Label></td>
                     <td>
-                        <asp:DropDownList ID="DropDownList2" runat="server" Width="167px" DataSourceID="SqlDataSource2" DataTextField="Matchname" DataValueField="Matchname" OnSelectedIndexChanged="DropDownList2_SelectedIndexChanged">
+                        <asp:DropDownList ID="DropDownList2" runat="server" Width="167px" AutoPostBack="True" DataSourceID="SqlDataSource2" DataTextField="Matchname" DataValueField="Matchname" OnSelectedIndexChanged="DropDownList2_SelectedIndexChanged">
                             <asp:ListItem>0</asp:ListItem>
                             <asp:ListItem>1</asp:ListItem>
                             <asp:ListItem>2</asp:ListItem>
@@ -114,6 +114,7 @@
                 <tr>
                     <td class="auto-style3">
                         <asp:Label ID="Label5" runat="server" Text="Address"></asp:Label></td>
+                    
                     <td>
                         <asp:TextBox ID="TextBox5" runat="server" Width="594px" TextMode="MultiLine" ToolTip="Type your address"></asp:TextBox></td>
                 </tr>
@@ -136,6 +137,14 @@
         
         <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=&quot;C:\Users\swapn\Google Drive\ASSIGNMENT\ASSIGNMENT\code\BOOKING APPLICATION\BOOKING APPLICATION\DB.mdb&quot;" OnSelecting="SqlDataSource2_Selecting" ProviderName="System.Data.OleDb" SelectCommand="SELECT Matchname FROM [Match]"></asp:SqlDataSource>
         
+        <div>
+            <asp:GridView ID="GridView1" runat="server"></asp:GridView>
+        </div>
+        <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=&quot;C:\Users\swapn\Google Drive\ASSIGNMENT\ASSIGNMENT\code\BOOKING APPLICATION\BOOKING APPLICATION\DB.mdb&quot;" OnSelecting="SqlDataSource3_Selecting" ProviderName="System.Data.OleDb" SelectCommand="SELECT MatchNo, Availability, Date_of_match, Stadium FROM [Match] WHERE (Matchname = ?)">
+            <SelectParameters>
+                <asp:ControlParameter ControlID="DropDownList2" Name="?" PropertyName="SelectedValue" />
+            </SelectParameters>
+        </asp:SqlDataSource>
     </form>
 </body>
 </html>
