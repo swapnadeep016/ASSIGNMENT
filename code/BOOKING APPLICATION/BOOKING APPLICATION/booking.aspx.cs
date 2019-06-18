@@ -9,32 +9,16 @@ namespace BOOKING_APPLICATION
 {
     public partial class booking : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            Label7.Text = DateTime.Now.ToString();
-
-            Label8.Text = GridView1.Rows[0].Cells[1].Text;
-
-            Label9.Text = GridView1.Rows[0].Cells[0].Text;
-
-            Label10.Text = GridView1.Rows[0].Cells[2].Text; ;
-
-        }
-
         protected void Button1_Click(object sender, EventArgs e)
         {
 
-           Label7.Text = DateTime.Now.ToString();
-
-            Label8.Text = GridView1.Rows[1].Cells[3].Text;
-
-            Label9.Text = GridView1.Rows[0].Cells[0].Text;
-
-            Label10.Text = GridView1.Rows[0].Cells[2].Text; ;
-
+            SqlDataSource1.InsertParameters[4].DefaultValue = DateTime.Now.ToString();
+            SqlDataSource1.InsertParameters[5].DefaultValue = GridView1.Rows[0].Cells[3].Text;
+            SqlDataSource1.InsertParameters[6].DefaultValue = GridView1.Rows[0].Cells[0].Text;
+           SqlDataSource1.InsertParameters[8].DefaultValue = GridView1.Rows[0].Cells[2].Text;
             SqlDataSource1.Insert();
         }
 
-      
+        
     }
 }

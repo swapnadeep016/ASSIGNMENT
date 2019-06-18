@@ -72,7 +72,7 @@
                     <td class="auto-style4">
                         <asp:Label ID="Label4" runat="server" Text="Subject:"></asp:Label></td>
                     <td>
-                        <asp:TextBox ID="TextBox4" runat="server" Width="592px" MaxLength="10" TextMode="Number"></asp:TextBox></td>
+                        <asp:TextBox ID="TextBox4" runat="server" Width="592px" MaxLength="10"></asp:TextBox></td>
                 </tr>
             </table>
             <table>
@@ -84,8 +84,17 @@
                 </tr>
             </table>
             <div>
-                <asp:Button ID="Button1" runat="server" Text="Submit" Width="104px" />
+                <asp:Button ID="Button1" runat="server" Text="Submit" Width="104px" OnClick="Button1_Click" />
             </div>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=&quot;C:\Users\swapn\Google Drive\ASSIGNMENT\ASSIGNMENT\code\BOOKING APPLICATION\BOOKING APPLICATION\DB.mdb&quot;" InsertCommand="INSERT INTO [Contact-Us] (Name, Email, PhoneNo, Subject, Description) VALUES (?, ?, ?, ?, ?)" ProviderName="System.Data.OleDb">
+            <InsertParameters>
+                <asp:ControlParameter ControlID="TextBox1" Name="?" PropertyName="Text" />
+                <asp:ControlParameter ControlID="TextBox2" Name="?" PropertyName="Text" />
+                <asp:ControlParameter ControlID="TextBox3" Name="?" PropertyName="Text" />
+                <asp:ControlParameter ControlID="TextBox4" Name="?" PropertyName="Text" />
+                <asp:ControlParameter ControlID="TextBox5" Name="?" PropertyName="Text" />
+            </InsertParameters>
+        </asp:SqlDataSource>
     </form>
 </body>
 </html>
