@@ -11,31 +11,30 @@ namespace BOOKING_APPLICATION
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Label7.Text = DateTime.Now.ToString();
+
+            Label8.Text = GridView1.Rows[0].Cells[1].Text;
+
+            Label9.Text = GridView1.Rows[0].Cells[0].Text;
+
+            Label10.Text = GridView1.Rows[0].Cells[2].Text; ;
 
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
 
-            SqlDataSource1.InsertParameters.Add("Date_of_booking",DateTime.Now.ToString());
-   
-            SqlDataSource1.InsertParameters.Add("Stadium", GridView1.Rows[0].Cells[0].Text);
+           Label7.Text = DateTime.Now.ToString();
 
-            SqlDataSource1.InsertParameters.Add("MatchNo",GridView1.Rows[0].Cells[0].Text);
+            Label8.Text = GridView1.Rows[1].Cells[3].Text;
 
-            SqlDataSource1.InsertParameters.Add("Date_of_match", GridView1.Rows[0].Cells[0].Text);
+            Label9.Text = GridView1.Rows[0].Cells[0].Text;
+
+            Label10.Text = GridView1.Rows[0].Cells[2].Text; ;
 
             SqlDataSource1.Insert();
         }
 
-        protected void SqlDataSource2_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
-        {
-
-        }
-
-        protected void SqlDataSource3_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
-        {
-
-        }
+      
     }
 }

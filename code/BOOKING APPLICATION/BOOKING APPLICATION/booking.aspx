@@ -121,37 +121,45 @@
             </table>
             <div>
                 <asp:Button ID="Button1" runat="server" Text="Submit" Width="104px" OnClick="Button1_Click" />
+                <br />
+                <asp:Label ID="Label7" runat="server" Text="Label"></asp:Label>
+                <asp:Label ID="Label8" runat="server" Text="Label"></asp:Label>
+                <asp:Label ID="Label9" runat="server" Text="Label"></asp:Label>
+                <asp:Label ID="Label10" runat="server" Text="Label"></asp:Label>
+                <asp:Label ID="Label11" runat="server" Text="Label"></asp:Label>
+                <br />
+                <asp:GridView ID="GridView1" runat="server" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" DataSourceID="SqlDataSource3">
+                    <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
+                    <HeaderStyle BackColor="#A55129" Font-Bold="True" ForeColor="White" />
+                    <PagerStyle ForeColor="#8C4510" HorizontalAlign="Center" />
+                    <RowStyle BackColor="#FFF7E7" ForeColor="#8C4510" />
+                    <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="White" />
+                    <SortedAscendingCellStyle BackColor="#FFF1D4" />
+                    <SortedAscendingHeaderStyle BackColor="#B95C30" />
+                    <SortedDescendingCellStyle BackColor="#F1E5CE" />
+                    <SortedDescendingHeaderStyle BackColor="#93451F" />
+                </asp:GridView>
         </div>
         
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=&quot;C:\Users\swapn\Google Drive\ASSIGNMENT\ASSIGNMENT\code\BOOKING APPLICATION\BOOKING APPLICATION\DB.mdb&quot;" InsertCommand="INSERT INTO [User] (PhoneNo, Name, Address, No_of_person, Date_of_booking, Stadium, MatchNo) VALUES (?, ?, ?, ?, ?, ?, ?)" ProviderName="System.Data.OleDb">
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=&quot;C:\Users\swapn\Google Drive\ASSIGNMENT\ASSIGNMENT\code\BOOKING APPLICATION\BOOKING APPLICATION\DB.mdb&quot;" InsertCommand="INSERT INTO [User] (PhoneNo, Name, Address, No_of_person, Date_of_booking, Stadium, MatchNo, Matchname, Date_of_match) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)" ProviderName="System.Data.OleDb">
             <InsertParameters>
                 <asp:ControlParameter ControlID="TextBox3" Name="?" PropertyName="Text" />
                 <asp:ControlParameter ControlID="TextBox1" Name="?" PropertyName="Text" />
                 <asp:ControlParameter ControlID="TextBox5" Name="?" PropertyName="Text" />
                 <asp:ControlParameter ControlID="DropDownList1" Name="?" PropertyName="SelectedValue" />
-                <asp:Parameter Name="?" />
-                <asp:Parameter Name="?" />
-                <asp:Parameter Name="?" />
+                <asp:ControlParameter ControlID="Label7" Name="?" PropertyName="Text" />
+                <asp:ControlParameter ControlID="Label8" Name="?" PropertyName="Text" />
+                <asp:ControlParameter ControlID="Label9" Name="?" PropertyName="Text" />
+                <asp:ControlParameter ControlID="DropDownList2" Name="?" PropertyName="SelectedValue" />
+                <asp:ControlParameter ControlID="Label10" Name="?" PropertyName="Text" />
             </InsertParameters>
         </asp:SqlDataSource>
         
         <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=&quot;C:\Users\swapn\Google Drive\ASSIGNMENT\ASSIGNMENT\code\BOOKING APPLICATION\BOOKING APPLICATION\DB.mdb&quot;" ProviderName="System.Data.OleDb" SelectCommand="SELECT Matchname FROM [Match]"></asp:SqlDataSource>
         
         <div>
-            <asp:GridView ID="GridView1" runat="server" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource3" ForeColor="Black" GridLines="Vertical">
-                <AlternatingRowStyle BackColor="White" />
-                <FooterStyle BackColor="#CCCC99" />
-                <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
-                <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
-                <RowStyle BackColor="#F7F7DE" />
-                <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
-                <SortedAscendingCellStyle BackColor="#FBFBF2" />
-                <SortedAscendingHeaderStyle BackColor="#848384" />
-                <SortedDescendingCellStyle BackColor="#EAEAD3" />
-                <SortedDescendingHeaderStyle BackColor="#575357" />
-            </asp:GridView>
         </div>
-        <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=&quot;C:\Users\swapn\Google Drive\ASSIGNMENT\ASSIGNMENT\code\BOOKING APPLICATION\BOOKING APPLICATION\DB.mdb&quot;" ProviderName="System.Data.OleDb" SelectCommand="SELECT MatchNo, Availability, Date_of_match, Stadium FROM [Match] WHERE (Matchname = ?)" OnSelecting="SqlDataSource3_Selecting">
+        <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=&quot;C:\Users\swapn\Google Drive\ASSIGNMENT\ASSIGNMENT\code\BOOKING APPLICATION\BOOKING APPLICATION\DB.mdb&quot;" ProviderName="System.Data.OleDb" SelectCommand="SELECT MatchNo, Availability, Date_of_match, Stadium FROM [Match] WHERE (Matchname = ?)">
             <SelectParameters>
                 <asp:ControlParameter ControlID="DropDownList2" Name="?" PropertyName="SelectedValue" />
             </SelectParameters>
