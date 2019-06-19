@@ -95,6 +95,8 @@
                 <asp:ControlParameter ControlID="TextBox5" Name="?" PropertyName="Text" />
             </InsertParameters>
         </asp:SqlDataSource>
+        <asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource1">
+        </asp:GridView>
     </form>
 </body>
 </html>

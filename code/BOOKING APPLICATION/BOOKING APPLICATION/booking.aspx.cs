@@ -15,7 +15,7 @@ namespace BOOKING_APPLICATION
             SqlDataSource1.InsertParameters[4].DefaultValue = DateTime.Now.ToString();
             SqlDataSource1.InsertParameters[5].DefaultValue = GridView1.Rows[0].Cells[3].Text;
             SqlDataSource1.InsertParameters[6].DefaultValue = GridView1.Rows[0].Cells[0].Text;
-           SqlDataSource1.InsertParameters[8].DefaultValue = GridView1.Rows[0].Cells[2].Text;
+            SqlDataSource1.InsertParameters[8].DefaultValue = GridView1.Rows[0].Cells[2].Text;
             SqlDataSource1.Insert();
         }
 
