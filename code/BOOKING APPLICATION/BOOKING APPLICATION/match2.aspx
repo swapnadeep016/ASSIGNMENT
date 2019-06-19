@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="match1.aspx.cs" Inherits="BOOKING_APPLICATION.match1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="match2.aspx.cs" Inherits="BOOKING_APPLICATION.match2" %>
 
 <!DOCTYPE html>
 
@@ -46,7 +46,7 @@
          <table>
             <tr>
                 <td>
-                    <asp:Image ID="Image1" runat="server" ImageUrl="~/pic/rugby-stedium-1.jpg" Height="400px" Width="100%" />
+                    <asp:Image ID="Image1" runat="server" ImageUrl="~/pic/rugby-stedium-2.jpg" Height="400px" Width="100%" />
                 </td>             
             </tr>
          </table>
