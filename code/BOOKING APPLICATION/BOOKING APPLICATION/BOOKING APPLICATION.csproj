@@ -73,6 +73,9 @@
     <Content Include="contact-us.aspx" />
     <Content Include="DB.mdb" />
     <Content Include="match.aspx" />
+    <Content Include="match1.aspx" />
+    <Content Include="match2.aspx" />
+    <Content Include="match3.aspx" />
     <Content Include="pic\button.png" />
     <Content Include="pic\logo.png" />
     <Content Include="index.aspx">
@@ -122,6 +125,27 @@
     </Compile>
     <Compile Include="match.aspx.designer.cs">
       <DependentUpon>match.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="match1.aspx.cs">
+      <DependentUpon>match1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="match1.aspx.designer.cs">
+      <DependentUpon>match1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="match2.aspx.cs">
+      <DependentUpon>match2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="match2.aspx.designer.cs">
+      <DependentUpon>match2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="match3.aspx.cs">
+      <DependentUpon>match3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="match3.aspx.designer.cs">
+      <DependentUpon>match3.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
