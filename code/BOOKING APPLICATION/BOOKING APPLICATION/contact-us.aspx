@@ -86,7 +86,7 @@
             <div>
                 <asp:Button ID="Button1" runat="server" Text="Submit" Width="104px" OnClick="Button1_Click" />
             </div>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=&quot;C:\Users\swapn\Google Drive\ASSIGNMENT\ASSIGNMENT\code\BOOKING APPLICATION\BOOKING APPLICATION\DB.mdb&quot;" InsertCommand="INSERT INTO [Contact-Us] (Name, Email, PhoneNo, Subject, Description) VALUES (?, ?, ?, ?, ?)" ProviderName="System.Data.OleDb">
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=&quot;C:\Users\swapn\Google Drive\ASSIGNMENT\ASSIGNMENT\code\BOOKING APPLICATION\BOOKING APPLICATION\DB.mdb&quot;" InsertCommand="INSERT INTO [Contact-Us] (Name, Email, PhoneNo, Subject, Description) VALUES (?, ?, ?, ?, ?)" ProviderName="System.Data.OleDb" SelectCommand="SELECT Name, Email, PhoneNo, Subject, Description FROM [Contact-Us]">
             <InsertParameters>
                 <asp:ControlParameter ControlID="TextBox1" Name="?" PropertyName="Text" />
                 <asp:ControlParameter ControlID="TextBox2" Name="?" PropertyName="Text" />

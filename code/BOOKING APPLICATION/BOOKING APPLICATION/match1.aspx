@@ -13,13 +13,7 @@
         background-attachment: fixed;
         background-size:100%;
     }
-    .auto-style3 {
-        width: 232px;
-    }
-    .auto-style4 {
-        width: 233px;
-    }
-</style>
+    </style>
 
 <body>
     <form id="form1" runat="server">
@@ -51,6 +45,8 @@
             </tr>
          </table>
         <asp:Button ID="Button1" runat="server" Text="Book Now" Width="104px" OnClick="Button1_Click" />
+         <br />
+         <br />
     </form>
 </body>
 </html>

@@ -67,9 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="abc.aspx" />
     <Content Include="booking.aspx" />
-    <Content Include="Booking1.aspx" />
     <Content Include="contact-us.aspx" />
     <Content Include="DB.mdb" />
     <Content Include="match.aspx" />
@@ -84,26 +82,12 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="abc.aspx.cs">
-      <DependentUpon>abc.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="abc.aspx.designer.cs">
-      <DependentUpon>abc.aspx</DependentUpon>
-    </Compile>
     <Compile Include="booking.aspx.cs">
       <DependentUpon>booking.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="booking.aspx.designer.cs">
       <DependentUpon>booking.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Booking1.aspx.cs">
-      <DependentUpon>Booking1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Booking1.aspx.designer.cs">
-      <DependentUpon>Booking1.aspx</DependentUpon>
     </Compile>
     <Compile Include="contact-us.aspx.cs">
       <DependentUpon>contact-us.aspx</DependentUpon>

@@ -13,5 +13,12 @@ namespace BOOKING_APPLICATION
         {
 
         }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            SqlDataSource1.Insert();
+        }
+
+     
     }
 }
