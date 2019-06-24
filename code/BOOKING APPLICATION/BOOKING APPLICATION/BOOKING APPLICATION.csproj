@@ -70,6 +70,7 @@
     <Content Include="booking.aspx" />
     <Content Include="contact-us.aspx" />
     <Content Include="DB.mdb" />
+    <Content Include="Global.asax" />
     <Content Include="match.aspx" />
     <Content Include="match1.aspx" />
     <Content Include="match2.aspx" />
@@ -79,6 +80,7 @@
     <Content Include="index.aspx">
       <BrowseToURL>~/index.aspx</BrowseToURL>
     </Content>
+    <Content Include="Print.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -95,6 +97,9 @@
     </Compile>
     <Compile Include="contact-us.aspx.designer.cs">
       <DependentUpon>contact-us.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
@@ -130,6 +135,13 @@
     </Compile>
     <Compile Include="match3.aspx.designer.cs">
       <DependentUpon>match3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Print.aspx.cs">
+      <DependentUpon>Print.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Print.aspx.designer.cs">
+      <DependentUpon>Print.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

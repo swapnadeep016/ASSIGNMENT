@@ -15,53 +15,82 @@ namespace BOOKING_APPLICATION
             SqlDataSource1.InsertParameters[6].DefaultValue = GridView1.Rows[0].Cells[0].Text;
             SqlDataSource1.InsertParameters[8].DefaultValue = GridView1.Rows[0].Cells[2].Text;
             SqlDataSource1.Insert();
-            /*
-            try
-            {
-                SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
-                client.EnableSsl = true;
-                client.DeliveryMethod = SmtpDeliveryMethod.Network;
-                client.Timeout = 10000;
-                client.UseDefaultCredentials = false;
-                //----------------------
-                client.Credentials = new System.Net.NetworkCredential("passwordgmail.com", "password");
-                MailMessage msg = new MailMessage();
-                //------------------------
-                msg.To.Add("passwordgmail.com");// sender email id
-                msg.From = new MailAddress("passwordgmail.com", "Mailer");// my email id
-                msg.Subject = "hello";
-                msg.Body = "hello";
-                client.Send(msg);
-            }
-           catch (Exception ex)
-            {
-                Label1.Text = ex.ToString();
-                //throw;
-            }
-            */
+
+
+            string name = TextBox1.Text;
+            string email = TextBox2.Text;
+            string pno = TextBox3.Text;
+            string numberofPerson = DropDownList1.SelectedValue.ToString();
+            string matches = DropDownList2.SelectedValue.ToString();
+            string address = TextBox5.Text;
+            string matchNo = GridView1.Rows[0].Cells[0].Text;
+            string DateofMatch = GridView1.Rows[0].Cells[2].Text;
+            string stadium = GridView1.Rows[0].Cells[3].Text;
+
+
+            Session["total"] = "Hello !! " + name + ",  \n  Your ticket purchase has been confirmed from the email ID : " + TextBox2.Text +
+                " .\n \nTickets has been booked for " + numberofPerson + "\n Billing address :" + address
+                + "\n \n Payment will be recieved on stadium Counter. Kindly bring exact Change." + ". \n Date of Match :: " + DateofMatch
+                + " \n Venue :: " + stadium;
+
+            Response.Redirect("Print.aspx");
+
+
+
+
+
+
+
+
+
+
+            /* 
+             try
+             {
+                 SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
+                 client.EnableSsl = true;
+                 client.DeliveryMethod = SmtpDeliveryMethod.Network;
+                 client.Timeout = 10000;
+                 client.UseDefaultCredentials = false;
+                 //----------------------
+                 client.Credentials = new System.Net.NetworkCredential("pasword@gmail.com", "pasword@");
+                 MailMessage msg = new MailMessage();
+                 //------------------------
+                 msg.To.Add("pasword@gmail.com");// sender email id
+                 msg.From = new MailAddress("pasword@gmail.com", "Mailer");// my email id
+                 msg.Subject = "hello";
+                 msg.Body = "hello";
+                 client.Send(msg);
+             }
+            catch (Exception ex)
+             {
+                 Label1.Text = ex.ToString();
+                 //throw;
+             }
+             */
             /*
             var client = new SmtpClient("smtp.gmail.com", 587)
             {
-                Credentials = new NetworkCredential("passwordgmail.com", "password"),
+                Credentials = new NetworkCredential("pasword@gmail.com", "pasword@"),
                 EnableSsl = true
             };
-            client.Send("passwordgmail.com", "passwordgmail.com", "test", "testbody");
+            client.Send("pasword@gmail.com", "pasword@gmail.com", "test", "testbody");
             Console.WriteLine("Sent");
             Console.ReadLine();
+            
             */
 
 
-
-
+            /*
 
             SmtpMail oMail = new SmtpMail("");
             SmtpClient oSmtp = new SmtpClient();
 
             // Your gmail email address
-            oMail.From = "passwordgmail.com";
+            oMail.From = "pasword@gmail.com";
 
             // Set recipient email address
-            oMail.To = "passwordgmail.com";
+            oMail.To = "pasword@gmail.com";
 
             // Set email subject
             oMail.Subject = "test email from gmail account";
@@ -79,8 +108,8 @@ namespace BOOKING_APPLICATION
 
             // Gmail user authentication
             // For example: your email is "gmailid@gmail.com", then the user should be the same
-            oServer.User = "passwordgmail.com";
-            oServer.Password = "password";
+            oServer.User = "pasword@gmail.com";
+            oServer.password = "pasword@";
 
             try
             {
@@ -94,6 +123,9 @@ namespace BOOKING_APPLICATION
                 Console.WriteLine(ep.Message);
             }
 
+    */
+
+
 
 
 
@@ -101,6 +133,6 @@ namespace BOOKING_APPLICATION
 
         }
 
-        
+
     }
 }
