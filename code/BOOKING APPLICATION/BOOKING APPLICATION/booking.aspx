@@ -15,6 +15,14 @@
         .auto-style3 {
             width: 218px;
         }
+        .print-this-page-booking{
+            background: rgba(22, 160, 133, 1);
+            color: #ffffff;
+            border-radius: 4px;
+            padding: 6px;
+            border: none;
+            cursor: pointer;
+    }
     </style>
 <body>
     <form id="form1" runat="server">
@@ -120,7 +128,7 @@
                 </tr>
             </table>
             
-                <asp:Button ID="Button1" runat="server" Text="Submit" Width="104px" OnClick="Button1_Click" />
+                <asp:Button ID="Button1" runat="server" Text="Submit" Width="104px" class="print-this-page-booking" OnClick="Button1_Click" />
         
         
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=&quot;C:\Users\swapn\Google Drive\ASSIGNMENT\ASSIGNMENT\code\BOOKING APPLICATION\BOOKING APPLICATION\DB.mdb&quot;" InsertCommand="INSERT INTO [User] (PhoneNo, Name, Address, No_of_person, Date_of_booking, Stadium, MatchNo, Matchname, Date_of_match) VALUES (?, ?, ?, ?, ?, ?, ?,?,?)" ProviderName="System.Data.OleDb">
