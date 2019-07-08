@@ -26,16 +26,16 @@
           
                 </td>
                 <td>
-                    <asp:LinkButton ID="LinkButton1" runat="server">HOME</asp:LinkButton>
+                    <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/index.aspx">HOME</asp:LinkButton>
                 </td>
                 <td>
-                    <asp:LinkButton ID="LinkButton2" runat="server">MATCH</asp:LinkButton>
+                    <asp:LinkButton ID="LinkButton2" runat="server" PostBackUrl="~/match.aspx">MATCH</asp:LinkButton>
                 </td>
                 <td>
-                    <asp:LinkButton ID="LinkButton3" runat="server">BOOKING</asp:LinkButton>
+                    <asp:LinkButton ID="LinkButton3" runat="server" PostBackUrl="~/booking.aspx">BOOKING</asp:LinkButton>
                 </td>
                 <td>
-                    <asp:LinkButton ID="LinkButton4" runat="server">CONTACT US</asp:LinkButton>
+                    <asp:LinkButton ID="LinkButton4" runat="server" PostBackUrl="~/contact-us.aspx">CONTACT US</asp:LinkButton>
                 </td>
             </tr>
           </table>
@@ -48,7 +48,7 @@
                           <center><asp:Label ID="Label1" runat="server" Text="IRELAND VS. GERMANY"></asp:Label></center>
                        </table> 
                         <table>
-                           <asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="~/pic/rugby-stedium-1.jpg" Height="100px" Width="200px"></asp:ImageButton>
+                           <asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="~/pic/rugby-stedium-1.jpg" Height="100px" Width="200px" PostBackUrl="~/match.aspx"></asp:ImageButton>
                        </table>                 
                     </td>
                     <td>
@@ -56,7 +56,7 @@
                            <center><asp:Label ID="Label2" runat="server" Text="AUSTRALIA VS. ENGLAND"></asp:Label></center>
                        </table> 
                         <table>
-                           <asp:ImageButton ID="ImageButton3" runat="server" ImageUrl="~/pic/rugby-stedium-2.jpg" Height="100px" Width="200px"></asp:ImageButton>
+                           <asp:ImageButton ID="ImageButton3" runat="server" ImageUrl="~/pic/rugby-stedium-2.jpg" Height="100px" Width="200px" PostBackUrl="~/match.aspx"></asp:ImageButton>
                        </table>
                     </td>
                     <td>
@@ -64,7 +64,7 @@
                            <center><asp:Label ID="Label3" runat="server" Text="NETHERLAND VS. SCOTLAND"></asp:Label></center>
                        </table> 
                         <table>
-                           <asp:ImageButton ID="ImageButton4" runat="server" ImageUrl="~/pic/rugby-stedium-3.jpg" Height="100px" Width="200px"></asp:ImageButton>
+                           <asp:ImageButton ID="ImageButton4" runat="server" ImageUrl="~/pic/rugby-stedium-3.jpg" Height="100px" Width="200px" PostBackUrl="~/match.aspx"></asp:ImageButton>
                        </table>
                     </td>  
                 </tr>
@@ -78,7 +78,7 @@
                           <center><asp:Label ID="Label4" runat="server" Text="SPAIN VS. NEWZEALAND"></asp:Label></center>
                        </table> 
                         <table>
-                           <asp:ImageButton ID="ImageButton5" runat="server" ImageUrl="~/pic/rugby-stedium-4.jpg" Height="100px" Width="200px"></asp:ImageButton>
+                           <asp:ImageButton ID="ImageButton5" runat="server" ImageUrl="~/pic/rugby-stedium-4.jpg" Height="100px" Width="200px" PostBackUrl="~/match.aspx"></asp:ImageButton>
                        </table>                 
                     </td>
                     <td>
@@ -86,7 +86,7 @@
                            <center><asp:Label ID="Label5" runat="server" Text="ITALY VS. FRANCE"></asp:Label></center>
                        </table> 
                         <table>
-                           <asp:ImageButton ID="ImageButton6" runat="server" ImageUrl="~/pic/rugby-stedium-5.jpg" Height="100px" Width="200px"></asp:ImageButton>
+                           <asp:ImageButton ID="ImageButton6" runat="server" ImageUrl="~/pic/rugby-stedium-5.jpg" Height="100px" Width="200px" PostBackUrl="~/match.aspx"></asp:ImageButton>
                        </table>
                     </td>
                     <td>
@@ -94,7 +94,7 @@
                            <center><asp:Label ID="Label6" runat="server" Text="CROATIA VS. BELIZE"></asp:Label></center>
                        </table> 
                         <table>
-                           <asp:ImageButton ID="ImageButton7" runat="server" ImageUrl="~/pic/rugby-stedium-6.jpg" Height="100px" Width="200px"></asp:ImageButton>
+                           <asp:ImageButton ID="ImageButton7" runat="server" ImageUrl="~/pic/rugby-stedium-6.jpg" Height="100px" Width="200px" PostBackUrl="~/match.aspx"></asp:ImageButton>
                        </table>
                     </td>  
                 </tr>
@@ -108,7 +108,7 @@
                           <center><asp:Label ID="Label7" runat="server" Text="DENMARK VS. CHILE"></asp:Label></center>
                        </table> 
                         <table>
-                           <asp:ImageButton ID="ImageButton8" runat="server" ImageUrl="~/pic/rugby-stedium-7.jpg" Height="100px" Width="200px"></asp:ImageButton>
+                           <asp:ImageButton ID="ImageButton8" runat="server" ImageUrl="~/pic/rugby-stedium-7.jpg" Height="100px" Width="200px" PostBackUrl="~/match.aspx"></asp:ImageButton>
                        </table>                 
                     </td>
                     <td>
@@ -116,7 +116,7 @@
                            <center><asp:Label ID="Label8" runat="server" Text="BELGIUM VS. COLUMBIA"></asp:Label></center>
                        </table> 
                         <table>
-                           <asp:ImageButton ID="ImageButton9" runat="server" ImageUrl="~/pic/rugby-stedium-8.jpg" Height="100px" Width="200px"></asp:ImageButton>
+                           <asp:ImageButton ID="ImageButton9" runat="server" ImageUrl="~/pic/rugby-stedium-8.jpg" Height="100px" Width="200px" PostBackUrl="~/match.aspx"></asp:ImageButton>
                        </table>
                     </td>
                     <td>
@@ -124,7 +124,7 @@
                            <center><asp:Label ID="Label9" runat="server" Text="AUSTRIA VS. BOLIVIA"></asp:Label></center>
                        </table> 
                         <table>
-                           <asp:ImageButton ID="ImageButton10" runat="server" ImageUrl="~/pic/rugby-stedium-9.jpg" Height="100px" Width="200px"></asp:ImageButton>
+                           <asp:ImageButton ID="ImageButton10" runat="server" ImageUrl="~/pic/rugby-stedium-9.jpg" Height="100px" Width="200px" PostBackUrl="~/match.aspx"></asp:ImageButton>
                        </table>
                     </td>  
                 </tr>

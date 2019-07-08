@@ -24,16 +24,16 @@
           
                 </td>
                 <td>
-                    <asp:LinkButton ID="LinkButton1" runat="server">HOME</asp:LinkButton>
+                    <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/index.aspx">HOME</asp:LinkButton>
                 </td>
                 <td>
-                    <asp:LinkButton ID="LinkButton2" runat="server">MATCH</asp:LinkButton>
+                    <asp:LinkButton ID="LinkButton2" runat="server" PostBackUrl="~/match.aspx">MATCH</asp:LinkButton>
                 </td>
                 <td>
-                    <asp:LinkButton ID="LinkButton3" runat="server">BOOKING</asp:LinkButton>
+                    <asp:LinkButton ID="LinkButton3" runat="server" PostBackUrl="~/booking.aspx">BOOKING</asp:LinkButton>
                 </td>
                 <td>
-                    <asp:LinkButton ID="LinkButton4" runat="server">CONTACT US</asp:LinkButton>
+                    <asp:LinkButton ID="LinkButton4" runat="server" PostBackUrl="~/contact-us.aspx">CONTACT US</asp:LinkButton>
                 </td>
              </tr>
          </table>
@@ -41,6 +41,9 @@
             <tr>
                 <td>
                     <asp:Image ID="Image1" runat="server" ImageUrl="~/pic/rugby-stedium-1.jpg" Height="400px" Width="100%" />
+                    <asp:Label ID="Label2" runat="server" Text="Predicted Weather"></asp:Label>
+                    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                    <asp:Image ID="Image2" runat="server" />
                 </td>             
             </tr>
          </table>

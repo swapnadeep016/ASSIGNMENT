@@ -13,13 +13,7 @@
         background-attachment: fixed;
         background-size:100%;
     }
-    .auto-style3 {
-        width: 232px;
-    }
-    .auto-style4 {
-        width: 233px;
-    }
-</style>
+    </style>
 
 <body>
     <form id="form1" runat="server">
@@ -30,16 +24,16 @@
           
                 </td>
                 <td>
-                    <asp:LinkButton ID="LinkButton1" runat="server">HOME</asp:LinkButton>
+                    <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/index.aspx">HOME</asp:LinkButton>
                 </td>
                 <td>
-                    <asp:LinkButton ID="LinkButton2" runat="server">MATCH</asp:LinkButton>
+                    <asp:LinkButton ID="LinkButton2" runat="server" PostBackUrl="~/match.aspx">MATCH</asp:LinkButton>
                 </td>
                 <td>
-                    <asp:LinkButton ID="LinkButton3" runat="server">BOOKING</asp:LinkButton>
+                    <asp:LinkButton ID="LinkButton3" runat="server" PostBackUrl="~/booking.aspx">BOOKING</asp:LinkButton>
                 </td>
                 <td>
-                    <asp:LinkButton ID="LinkButton4" runat="server">CONTACT US</asp:LinkButton>
+                    <asp:LinkButton ID="LinkButton4" runat="server" PostBackUrl="~/contact-us.aspx">CONTACT US</asp:LinkButton>
                 </td>
              </tr>
          </table>
@@ -50,6 +44,10 @@
                 </td>             
             </tr>
          </table>
+         <asp:Label ID="Label2" runat="server" Text="Predicted Weather"></asp:Label>
+         <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+         <asp:Image ID="Image2" runat="server" />
+         <br />
         <asp:Button ID="Button1" runat="server" Text="Book Now" Width="104px" OnClick="Button1_Click" />
     </form>
 </body>
