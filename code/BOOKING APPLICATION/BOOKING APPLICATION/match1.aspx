@@ -47,7 +47,7 @@
                 </td>             
             </tr>
          </table>
-        <asp:Button ID="Button1" runat="server" Text="Book Now" Width="104px" OnClick="Button1_Click" />
+        <asp:Button ID="Button1" runat="server" Text="Book Now" Width="104px" OnClick="Button1_Click" PostBackUrl="~/booking.aspx" />
          <br />
          <br />
     </form>

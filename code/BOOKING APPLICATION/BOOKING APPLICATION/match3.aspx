@@ -48,7 +48,7 @@
          <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
          <asp:Image ID="Image2" runat="server" />
          <br />
-        <asp:Button ID="Button1" runat="server" Text="Book Now" Width="104px" OnClick="Button1_Click" />
+        <asp:Button ID="Button1" runat="server" Text="Book Now" Width="104px" OnClick="Button1_Click" PostBackUrl="~/booking.aspx" />
     </form>
 </body>
 </html>
