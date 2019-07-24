@@ -20,8 +20,7 @@
          <table style="width:100%;">
             <tr>
                 <td>
-                    <asp:ImageButton ID="ImageButton1" runat="server" Height="98px" ImageUrl="~/pic/logo.png" Width="180px" />
-          
+                    <asp:ImageButton ID="ImageButton1" runat="server" Height="98px" ImageUrl="~/pic/logo.png" Width="180px" />    
                 </td>
                 <td>
                     <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/index.aspx">HOME</asp:LinkButton>

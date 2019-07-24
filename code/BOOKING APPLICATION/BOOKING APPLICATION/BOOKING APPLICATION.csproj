@@ -44,6 +44,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="NewsAPI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NewsAPI.0.5.0\lib\portable45-net45+win8+wpa81\NewsAPI.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -79,6 +82,7 @@
     <Content Include="match1.aspx" />
     <Content Include="match2.aspx" />
     <Content Include="match3.aspx" />
+    <Content Include="News.aspx" />
     <Content Include="pic\button.png" />
     <Content Include="pic\logo.png" />
     <Content Include="index.aspx">
@@ -146,6 +150,13 @@
     </Compile>
     <Compile Include="match3.aspx.designer.cs">
       <DependentUpon>match3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="News.aspx.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="News.aspx.designer.cs">
+      <DependentUpon>News.aspx</DependentUpon>
     </Compile>
     <Compile Include="Print.aspx.cs">
       <DependentUpon>Print.aspx</DependentUpon>
