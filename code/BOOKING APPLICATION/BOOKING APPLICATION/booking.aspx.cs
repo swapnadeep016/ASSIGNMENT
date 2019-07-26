@@ -1,4 +1,5 @@
 ﻿using System;
+using Nexmo.Api;
 using System.Net;
 using System.Net.Mail;
 using System.Web.Mail;
@@ -32,6 +33,18 @@ namespace BOOKING_APPLICATION
                 " .\n \nTickets has been booked for " + numberofPerson + "\n Billing address :" + address
                 + "\n \n Payment will be recieved on stadium Counter. Kindly bring exact Change." + ". \n Date of Match :: " + DateofMatch
                 + " \n Venue :: " + stadium;
+
+            var client = new Client(creds: new Nexmo.Api.Request.Credentials
+            {
+                ApiKey = "24785bea",
+                ApiSecret = "gQo7Yp56k42dAToL"
+            });
+            var results = client.SMS.Send(request: new SMS.SMSRequest
+            {
+                from = "Nexmo",
+                to = 353899476388,
+                text = "Your Ticket Has Been Successfully Booked!!"
+            });
 
             Response.Redirect("Print.aspx");
 
